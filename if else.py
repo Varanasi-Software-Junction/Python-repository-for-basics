@@ -1,10 +1,21 @@
-a=4
-b=2
-c=3
+a=int(input("A="))
+b=int(input("B="))
+c=int(input("C="))
+if a<b and a<c:
+    min=a
+elif b<c:
+    min=b
+else:
+    min=c
+
 if a>b and a>c:
     max=a
-elif(b>c):
+elif b>c:
     max=b
 else:
     max=c
-print(max)
+mid= a+b+c-min-max
+print(min,max,mid)
+
+
+
