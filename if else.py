@@ -1,3 +1,11 @@
-a=3
-b=3
-print("a=",a,"b=",b,"a<b",a<b,"a>b",a>b,"a<=b",a<=b,"a>=b",a>=b,"a>b",a>b,"a==b",a==b,"a!=b",a!=b)
+a=4
+b=28
+c=3
+if a>b and a>c:
+    max=a
+else:
+    if(b>c):
+        max=b
+    else:
+        max=c
+print(max)
