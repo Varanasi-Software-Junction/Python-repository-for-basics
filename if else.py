@@ -1,11 +1,10 @@
 a=4
-b=28
+b=2
 c=3
 if a>b and a>c:
     max=a
+elif(b>c):
+    max=b
 else:
-    if(b>c):
-        max=b
-    else:
-        max=c
+    max=c
 print(max)
