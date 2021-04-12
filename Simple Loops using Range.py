@@ -31,7 +31,7 @@ for x in r:
     print(x)
 r=range(6)#This will print from 2 to 9 incr by 3. 2,5,8
 r=reversed(r)
-print("range(6")
+print("range(6)")
 for x in r:
     print(x)
 
