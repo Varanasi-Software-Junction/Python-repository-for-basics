@@ -6,13 +6,14 @@ minute=int(input("enter a minute"))
 13:45    1:45 PM   01:45 PM   12:05 PM
 
 """
+x1="10"
+x2="50"
+x3= " AM"
+if minute<10:
+    x2="0" + str( minute)
 
-if hour<=11:
-    print(hour,":",minute," AM")
-elif hour==12:
-    print(hour, ":", minute, " PM")
-else:
-    print(hour-12, ":", minute, " AM")
+
+print(x1,":",x2,x3)
 
 
 
