@@ -1,15 +1,20 @@
 hour=int(input("enter a hour"))
 minute=int(input("enter a minute"))
+"""
+11:45  11;45 AM
+12:45   12:45 PM
+13:45    1:45 PM   01:45 PM   12:05 PM
+
+"""
+
 if hour<=11:
-    hr=hour
-    ampm="AM"
-if hour==12:
-    hr=hour
-    ampm="PM"
-if hour>12:
-    ampm="PM"
-    hr=hour-12
-print(hr,minute,ampm,sep=".")
+    print(hour,":",minute," AM")
+elif hour==12:
+    print(hour, ":", minute, " PM")
+else:
+    print(hour-12, ":", minute, " AM")
+
+
 
 
 
