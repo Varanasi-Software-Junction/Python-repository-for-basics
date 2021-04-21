@@ -1,8 +1,11 @@
-n=4
-for row in range(1,n+1):
-    for space in range(1,n-row+1):
+n=7
+for row in reversed(range(1,n)):
+    for left in range(1,row+1):
+        print("0",end="")
+    for space in range(1,2*n - 2*row):
         print(" ",end="")
-    for col in range(1,row+1):
-
-        print(col,end="")
+    for left in range(1,row+1):
+        print("0",end="")
     print()
+for row in range(1,2*n):
+    print("0",end="")
