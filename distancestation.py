@@ -5,11 +5,13 @@ while True:
     if(n==0):
         break
     if(n==1):
+        print("Add")
         print("Enter station")
         station=input()
         distance=int(input())
         d[station]=distance
     if (n==2):
+        print("Remove")
         print("Enter station")
         station=input()
 
@@ -20,6 +22,7 @@ while True:
         del d[station]
         print("Removed")
     if  (n==3):
+        print("Change")
         print("Enter station")
         station=input()
         distance=int(input())
@@ -32,11 +35,17 @@ while True:
             d[station]=distance
             print("Changed")
     if  (n==4):
+        print("View")
         print("Enter station")
         station=input()
         distance=int(input())
         print(distance)
+    if (n==5):
+        print("View All")
+    if (n==6):
+        print("Distance")
     if n==7:
+
             for station in d:
                 print("station=",station,"distance=,",d[station])
     if n==8:
