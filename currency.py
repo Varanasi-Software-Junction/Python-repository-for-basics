@@ -20,11 +20,32 @@ class Currency:
     def __add__(self, other):
         c=Currency(0,self.totalpaisa + other.totalpaisa)
         return c
-
-
-c1=Currency(-10,50)
+    def __sub__(self,other):
+        c=Currency(0,self.totalpaisa-other.totalpaisa)
+        return c
+    def __mul__(self,other):
+        c=Currency(0,self.totalpaisa*other.totalpaisa//100)
+        return c
+    def __divmod__(self, other):
+        return Currency(0,0)
+    def __ge__(self, other):
+        return self.totalpaisa>=other.totalpaisa
+    def __gt__(self,other):
+        return self.totalpaisa>other.totalpaisa
+    def __lt__(self,other):
+        return self.totalpaisa<other.totalpaisa
+    def __le__(self, other):
+        return self.totalpaisa<=other.totalpaisa
+c1=Currency(3,50)
 print(c1)
-c2=Currency(11,50)
+c2=Currency(3,50)
 print(c2)
 sum = c1 + c2
 print(sum)
+print(c1-c2)
+mul=c1*c2
+print(mul)
+print(c1>=c2)
+print(c1>c2)
+print(c1<c2)
+print(c1<=c2)
