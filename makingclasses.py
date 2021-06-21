@@ -1,0 +1,12 @@
+localitiesinvaranasi={1:"Lanka",2:"Godowlia"}
+citiesinup={"VNS":localitiesinvaranasi,2:"LKO"}
+statesinindia={"UP":citiesinup,2:"Punjab"}
+print(statesinindia)
+print(statesinindia["UP"])
+print(statesinindia["UP"]["VNS"])
+vns=statesinindia["UP"]["VNS"]
+print(vns)
+print(vns[1])
+print(statesinindia["UP"]["VNS"][1])
+l=[]
+l.
