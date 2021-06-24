@@ -1,9 +1,27 @@
 import  requests
 import  json
-url="http://api.openweathermap.org/data/2.5/weather?q=Varanasi&appid=4a1f8a61b74546825af1e0be106e797b"
+import datetime as dt
+print(dt.datetime.fromtimestamp(1624491535))
+appid="4a1f8a61b74546825af1e0be106e797b"
+city="Varanasi"
+url="https://api.openweathermap.org/data/2.5/weather?q={1}&appid={0}&units=metric".format(appid,city)
 response=requests.get(url)
-print(response.status_code)
-print(response.text)
-jsondata=json.loads(response.text)
-print(type(  jsondata))
-print(jsondata["weather"][0]['description'])
+code=response.status_code
+print(code)
+#200 means success
+#Status code 404 not found
+#Sttus code 401 is not authorized
+#print(response.text)
+if code!=200:
+    print("Error")
+else:
+    jsondata=json.loads(response.text)
+    print(jsondata)
+    weather=jsondata.get("weather")[0]
+    main_data=weather.get("main")
+    main_description=weather.get("description")
+    print(weather)
+    print(main_data)
+    print(main_description)
+    temp=jsondata.get("main").get("temp")
+    print(temp,"deg Celsius")
