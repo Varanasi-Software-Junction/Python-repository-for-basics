@@ -1,16 +1,22 @@
-l=['A','B','C']
-n=len(l)
-for i in range(n):
-    p1=[l[i]]
-    for j in range(n):
-        p2=p1.copy()
-        if l[j] in p2:
+def permute(l,i,n):
+    if i>n-1:
+        print(l)
+        return
+
+    for r in range(n):
+        slice=l[:i]
+        if r in slice:
             continue
-        p2=p2 + [l[j]]
-        for k in range(n):
-            p3=p2.copy()
-            if l[k] in p3:
-                continue
-            p3=p3 + [l[k]]
-            print(p3)
+        l[i]=r
+        permute(l,i+1,n)
+l=[1,2,3]
+n=len(l)
+permute(l,0,n)
+
+
+
+
+
+
+
 
