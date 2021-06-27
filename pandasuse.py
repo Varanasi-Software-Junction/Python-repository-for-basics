@@ -1,6 +1,23 @@
 import pandas as pd
-import xlrd
-data=pd.read_csv("data.csv")
+data = pd.read_csv("pandas.csv")
+print(data)
+"""
+datarun=data["run"]
+print(datarun)
+
+datarun=data.run
+print(datarun)
+max=datarun.max()
+print(max)
+print(datarun.median())
+print(type(data))
+print(data)
+datanames=data["name"]
+print(datanames)
+print(type(datanames))
+print(data.describe())
+print(datanames.describe())
+
 #print(data)
 #print(type(data))
 datadict=data.to_dict()
@@ -17,3 +34,4 @@ print(datarun)
 datarun=data[data.run== data.run.min()]
 print(datarun)
 print(data.describe())
+"""
