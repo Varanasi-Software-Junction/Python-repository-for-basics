@@ -1,5 +1,5 @@
 d={}
-top=-1
+
 while (True):
     x=input("Enter the word:")
     x=x.strip()
@@ -19,7 +19,7 @@ l=list(s)
 m1=max(l)
 l.remove(m1)
 #print(m1)
-m2=max(1)
+m2=max(l)
 l.remove(m2)
 #print(m2)
 m3=max(l)
@@ -63,3 +63,5 @@ for a in d.keys():
 
 
 
+for x in d.keys():
+    print(x,d[x])
